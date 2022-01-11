@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/*main-container*/
+.main-container {
+    padding: 20px 20px 40px;
+    margin: 20px auto;
+    display: flex;
+    width: 1050px;
+    min-height: 100vh;
+    color: #444;
+    background: rgba(211, 211, 211, .5);
+}
+
+.proffesion {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.name {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(90, 0, 143);
+}
+
+.my-photo {
+    display: block;
+    margin: 30px auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0px 0px 5px #444;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.item__title {
+    position: relative;
+    padding: 0 0 0 45px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 45px;
+    color: rgb(90, 0, 143);
+    text-transform: uppercase;
+    border-bottom: 3px solid rgb(90, 0, 143);
+    background: rgba(90, 0, 143, .1);
+}
+
+.item__title::before {
+    content: '	\00BB';
+    position: absolute;
+    padding: 0 10px;
+    top: 1px;
+    left: 0;
+    font-size: 23px;
+    height: 100%;
+    color: #fff;
+    background: rgb(90, 0, 143);
+}
+
+.block {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.block__item {
+    position: relative;
+    padding-left: 20px;
+}
+
+.block__item::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: rgb(90, 0, 143);
+}
+
+/*contacts container*/
+.contacts__block {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__link img {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.more-info__item.block__item::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 10px;
+    left: 0;
+    background: rgb(90, 0, 143);
+}
+
+/*info-container*/
+.info-container {
+    padding: 20px 20px 20px 50px;
+    color: #444;
+    line-height: 22px;
+}
+
+.training-courses__subtitle,
+.more-info__subtitle {
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.training-courses__time {
+    display: block;
+    margin-top: 5px;
+    color: #a8a8a8;
+}
+
+.more-info__link {
+    font-size: 25px;
+    vertical-align: middle;
+}
