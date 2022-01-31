@@ -36,7 +36,6 @@ body {
     width: 1050px;
     min-height: 100vh;
     color: #444;
-    background: rgba(211, 211, 211, .5);
 }
 
 .proffesion {
@@ -77,7 +76,6 @@ body {
     color: rgb(90, 0, 143);
     text-transform: uppercase;
     border-bottom: 3px solid rgb(90, 0, 143);
-    background: rgba(90, 0, 143, .1);
 }
 
 .item__title::before {
