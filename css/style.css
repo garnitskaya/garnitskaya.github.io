@@ -132,7 +132,6 @@ body {
 .contacts__link img {
     width: 16px;
     height: 16px;
-    /*vertical-align: middle;*/
 }
 
 .more-info__item.block__item::before {
