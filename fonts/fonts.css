@@ -1,0 +1,33 @@
+/* font-family: "ArialRegular"; */
+@font-face {
+    font-family: "Arial";
+    src: url("../fonts/ArialRegular/ArialRegular.eot");
+    src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/ArialRegular/ArialRegular.woff") format("woff"),
+        url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* font-family: "ArialBold"; */
+@font-face {
+    font-family: "Arial";
+    src: url("../fonts/ArialBold/ArialBold.eot");
+    src: url("../fonts/ArialBold/ArialBold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/ArialBold/ArialBold.woff") format("woff"),
+        url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+
+/* font-family: "ArialBlack"; */
+@font-face {
+    font-family: "Arial";
+    src: url("../fonts/ArialBlack/ArialBlack.eot");
+    src: url("../fonts/ArialBlack/ArialBlack.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/ArialBlack/ArialBlack.woff") format("woff"),
+        url("../fonts/ArialBlack/ArialBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}

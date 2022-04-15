@@ -1,3 +1,9 @@
+:root {
+    --main-color: #cdb1a7;
+    --second-color: #444;
+    --box-shadow: 0px 0px 6px rgba(68, 68, 68, .8);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -19,64 +25,80 @@ a {
 
 html,
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Arial";
     height: 100%;
     width: 100%;
     font-size: 100%;
-    line-height: 1;
+    line-height: 19px;
     font-size: 16px;
     font-weight: 400;
+}
+
+.flex {
+    display: flex;
 }
 
 /*main-container*/
 .main-container {
     padding: 20px 20px 40px;
     margin: 20px auto;
-    display: flex;
+    display: grid;
+    grid-template: 210px auto/ minmax(150px, 300px) auto;
     max-width: 1050px;
     min-height: 100vh;
     color: #444;
 }
 
-.proffesion {
-    font-size: 17px;
-    font-weight: 600;
-    text-transform: capitalize;
+.header {
+    grid-column: 1 / 3;
+    display: flex;
+    align-items: center;
+    gap: 55px;
 }
 
-.name {
-    margin: 0;
-    text-transform: uppercase;
-    font-size: 28px;
-    font-weight: 700;
-    color: rgba(227, 6, 19, 0.5);
+.header__photo {
+    flex: 0 1 300px;
 }
 
 .my-photo {
     display: block;
-    margin: 30px auto;
+    margin: auto;
     width: 150px;
     height: 150px;
     object-fit: cover;
-    box-shadow: 0px 0px 6px rgba(68, 68, 68, .8);
-    border-radius: 3px
+    box-shadow: var(--box-shadow);
+    border-radius: 50%;
 }
 
-.sidebar {
-    flex: 0 0 300px;
+.proffesion {
+    margin-top: 10px;
+    font-size: 19px;
     line-height: 30px;
     font-weight: 500;
+    text-transform: capitalize;
+    color: var(--main-color);
 }
+
+.name {
+    margin: 0;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--second-color);
+    letter-spacing: 2px;
+}
+
 
 .item__title {
     position: relative;
-    padding: 0 0 0 40px;
+    padding: 0 0 0 30px;
     margin-top: 20px;
     font-size: 20px;
-    line-height: 37px;
-    color: rgba(227, 6, 19, 0.5);
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--second-color);
     text-transform: uppercase;
-    border-bottom: 2px solid rgba(227, 6, 19, 0.5);
+    border-bottom: 3px solid var(--main-color);
 }
 
 .item__title::before {
@@ -87,14 +109,13 @@ body {
     left: 0;
     font-size: 21px;
     height: 100%;
-    color: #fff;
-    background: rgba(227, 6, 19, 0.5);
-    ;
+    color: var(--main-color);
 }
 
 .block {
     list-style-type: none;
     margin-top: 20px;
+    line-height: 26px;
 }
 
 .block__item {
@@ -108,8 +129,9 @@ body {
     width: 8px;
     height: 8px;
     top: 50%;
+    transform: translateY(-50%);
     left: 0;
-    background: rgba(227, 6, 19, 0.5);
+    background: var(--main-color);
 }
 
 /*contacts container*/
@@ -123,68 +145,57 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: 5px;
-    width: 26px;
-    height: 26px;
-    background: rgba(227, 6, 19, 0.5);
-    border-radius: 50%;
+    vertical-align: middle;
 }
 
 .contacts__link img {
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
 }
 
-.more-info__item.block__item::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    top: 10px;
-    left: 0;
-    background: rgba(227, 6, 19, 0.5);
+.more-info__item.block__item::before,
+.training-courses__item.block__item::before {
+    top: 12px;
 }
 
 /*info-container*/
 .info-container {
     position: relative;
-    padding: 20px 20px 20px 50px;
+    padding: 0 20px 20px 50px;
     color: #444;
     line-height: 22px;
 }
 
-.training-courses__subtitle,
-.more-info__subtitle {
+.subtitle {
+    flex: 1 0 30%;
     margin-top: 20px;
     font-size: 19px;
-    font-weight: 600;
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
 }
 
 .training-courses__time {
     display: block;
     margin-top: 5px;
     color: #a8a8a8;
+    font-weight: 400;
 }
 
 .more-info__link {
     font-size: 25px;
     vertical-align: middle;
+    color: var(--main-color);
 }
 
-.download button {
-    position: absolute;
-    bottom: 0px;
-    padding: 5px 20px;
-    background: rgba(227, 6, 19, 0.5);
-    color: #fff;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 3px;
-    box-shadow: 0px 0px 6px rgba(68, 68, 68, .8);
-}
+@media (max-width:992px) {
+    .flex {
+        flex-wrap: wrap;
+    }
 
-.download button svg {
-    width: 12px;
-    height: 12px;
+    .flex-last .subtitle {
+        display: none;
+    }
 }
 
 @media (max-width:768px) {
@@ -192,16 +203,21 @@ body {
         margin: 0 auto;
     }
 
+
+    .header {
+        gap: 30px;
+    }
+
+    .header__photo {
+        flex: 1.5;
+    }
+
+    .header__block {
+        flex: 2;
+    }
+
     .name {
         font-size: 22px;
-    }
-
-    .my-photo {
-        margin: 15px auto;
-    }
-
-    .sidebar {
-        flex: 0 0 250px;
     }
 
     .item__title {
@@ -219,24 +235,40 @@ body {
         padding: 0 0 0 20px;
     }
 
-    .training-courses__subtitle,
-    .more-info__subtitle {
+    .subtitle {
         font-size: 18px;
     }
 }
 
 @media (max-width:576px) {
     .main-container {
-        flex-wrap: wrap;
+        grid-template: auto/ auto;
     }
 
+    .header {
+        grid-column: 1/2;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .proffesion {
+        margin-top: 0;
+    }
 
     .sidebar {
-        flex: 1 1 100%;
         padding: 0 20px;
     }
 
+    .contacts__block {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
+    .contacts__link {
+        margin-top: 10px;
+        flex: 50%;
+    }
 
     .info-container {
         padding: 0 20px;
