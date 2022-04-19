@@ -28,7 +28,6 @@ body {
     font-family: "Arial";
     height: 100%;
     width: 100%;
-    font-size: 100%;
     line-height: 19px;
     font-size: 16px;
     font-weight: 400;
@@ -154,7 +153,8 @@ body {
 }
 
 .more-info__item.block__item::before,
-.training-courses__item.block__item::before {
+.training-courses__item.block__item::before,
+.soft-skills__item.block__item::before {
     top: 12px;
 }
 
@@ -188,6 +188,7 @@ body {
     color: var(--main-color);
 }
 
+/*
 @media (max-width:992px) {
     .flex {
         flex-wrap: wrap;
@@ -273,4 +274,4 @@ body {
     .info-container {
         padding: 0 20px;
     }
-}
+}*/
