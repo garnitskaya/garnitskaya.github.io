@@ -188,7 +188,7 @@ body {
     color: var(--main-color);
 }
 
-/*
+
 @media (max-width:992px) {
     .flex {
         flex-wrap: wrap;
@@ -274,4 +274,4 @@ body {
     .info-container {
         padding: 0 20px;
     }
-}*/
+}

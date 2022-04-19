@@ -43,7 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
             { label: 'SPA My-Todo-List (добавление, удаление, фильтрация, поиск задач) React.JS', href: "https://garnitskaya.github.io/My-Todo-List" },
             { label: 'SPA RickAndMorty (получение и обработка данных с сервера, вывод блока со случайным персонажем, вывод страницы со списком персонажей, пагинация, фильтрация, поиск) React.JS', href: "https://garnitskaya.github.io/RickAndMorty/" },
             { label: ' SPA Weather', href: "https://garnitskaya.github.io/Weather/" },
-            { label: 'SPA My-Todo-List (добавление, удаление, фильтрация, поиск задач) React Native', href: "https://github.com/garnitskaya/myTodoList-expo" }
+            { label: 'SPA My-Todo-List (добавление, удаление, фильтрация, поиск задач) React Native', href: "https://github.com/garnitskaya/myTodoList-expo" },
+            { label: 'SPA Coffee Shop ( фильтрация, поиск товара, изпользование hooks, TypeScript и Redux)', href: "https://garnitskaya.github.io/coffee-shop/" },
         ],
         aboutMe: 'Начинающий Front-end разработчик, коммерческого опыта нет, но есть огромное желание расти и развиваться в этом направлении.'
     };
